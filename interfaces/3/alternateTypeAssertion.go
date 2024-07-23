@@ -5,13 +5,15 @@ import "fmt"
 // you can use a switch statement to have the same as we had in folder 2
 func getExpenseReport(e expense) (string, float64) {
 	switch v := e.(type) {
-	case email:
-		return v.toAddress, v.cost()
-	case sms:
-		return v.toPhoneNumber, v.cost()
+	case email: 
+		return v.toAddress , v.cost()
+	case sms: 
+		return v.toPhoneNumber , v.cost()
 	default:
 		return "", 0.0
 	}
+
+
 }
 
 // don't touch below this line
