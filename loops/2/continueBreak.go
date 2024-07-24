@@ -37,5 +37,5 @@ func test(max int) {
 }
 
 func main() {
-	test(3000000)
+	test(1000000)
 }
