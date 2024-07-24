@@ -45,6 +45,7 @@ func getCostByDayTeach (costs [] cost) [] float64 {
 
 
 
+
 func main () {
 	newSlice := make([]int, 5)
  	ap := []int{1, 2 , 4, 5}
