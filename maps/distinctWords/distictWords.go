@@ -9,6 +9,7 @@ func countDistinctWords(messages []string) int {
 		for _, word := range words {
 			lowerWord := strings.ToLower(word)
 			counter[lowerWord]++
+
 		}
 
 	}
