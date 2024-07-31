@@ -9,7 +9,7 @@ func countReports(numSentCh chan int) int {
     if !ok {
       break
     }
-    count = numReports
+    count += numReports
   }
   return count
 }
