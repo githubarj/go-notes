@@ -1,27 +1,27 @@
 package main
 
 import (
-	"fmt"
-	"time"
+                      	"fmt"
+  "time"
 )
 
 type email struct {
-	body string
-	date time.Time
+  body string
+  date time.Time
 }
 
-func checkEmailAge(emails [3]email) [3]bool {
-	isOldChan := make(chan bool, len(emails))
+func checkEmailAge (emails [3] email) [3] bool{
+  isOldChan := make(chan bool , len(emails))
 
-	go sendIsOld(isOldChan, emails)
+  go sendIsOld(isOldChan, emails)
 
-	isOld := [3]bool{}
-	isOld[0] = <-isOldChan
-	isOld[1] = <-isOldChan
-	isOld[2] = <-isOldChan
+  isOld := [3]bool{}
+  isOld[0] = <- isOldChan
+  isOld[1] = <- isOldChan
+  isOld[2] = <- isOldChan
 
-	close(isOldChan)
-	return isOld
+  close(isOldChan)
+  return isOld
 }
 
 func sendIsOld(isOldChan chan<- bool, emails [3]email) {
